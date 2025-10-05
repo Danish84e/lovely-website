@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lovely Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-pink-200 via-rose-200 to-purple-300 min-h-screen flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold text-pink-800 drop-shadow-lg mb-4 animate-pulse">
+        🌸 Lovely Day 🌸
+      </h1>
+      <p class="text-xl text-pink-700 mb-6">You’re doing amazing — keep going 💖</p>
+      <button
+        onclick="changeMessage()"
+        class="px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-2xl shadow-lg transition"
+      >
+        Give Me Another Compliment ✨
+      </button>
+      <p id="compliment" class="mt-6 text-lg text-purple-800"></p>
+    </div>
+
+    <script>
+      const compliments = [
+        "You light up the room 🌟",
+        "Your smile makes everything better 😊",
+        "You’re a masterpiece in progress 🎨",
+        "You make kindness look effortless 💐",
+        "You’re doing so well — be proud 💕",
+      ];
+      function changeMessage() {
+        const msg = compliments[Math.floor(Math.random() * compliments.length)];
+        document.getElementById("compliment").textContent = msg;
+      }
+    </script>
+  </body>
+</html>
